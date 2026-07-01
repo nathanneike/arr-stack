@@ -22,7 +22,7 @@ prowlarr
 | 9696 | 9696 | Web interface |
 
 Acess at : 
-''' bash
+``` bash
 http://<NAS-IP>:9696 
 
 ### Volumes 
