@@ -24,7 +24,7 @@ prowlarr
 Acess at : 
 ``` bash
 http://<NAS-IP>:9696 
-
+```
 ### Volumes 
 
 | Host | Container | Purpose |
