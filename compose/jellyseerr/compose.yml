@@ -1,0 +1,22 @@
+services:
+  jellyseerr:
+    image: fallenbagel/jellyseerr:latest
+    container_name: jellyseerr
+
+    restart: unless-stopped
+
+    environment:
+      - TZ=Europe/Paris
+
+    ports:
+      - "5055:5055"
+
+    volumes:
+      - /volume1/homelab/appdata/jellyseerr:/app/config
+
+    networks:
+      - homelab
+
+networks:
+  homelab:
+    external: true
