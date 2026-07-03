@@ -2,6 +2,9 @@ services:
   prowlarr:
     image: lscr.io/linuxserver/prowlarr:latest
     container_name: prowlarr
+    
+    networks:
+      - homelab 
 
     restart: unless-stopped
 
@@ -14,3 +17,7 @@ services:
 
     volumes:
       - /volume1/homelab/appdata/prowlarr:/config
+
+networks:
+  homelab:
+    external: true
