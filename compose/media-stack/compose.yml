@@ -1,6 +1,6 @@
 services:
   gluetun:
-    image: qmcgaw/gluetun:latest
+    image: qmcgaw/gluetun:v3.40.0
     container_name: gluetun
 
     cap_add:
@@ -13,8 +13,8 @@ services:
       - .env
 
     ports:
-      - "8080:8080"      # qBittorrent Web UI
-      - "6881:6881/tcp"  # Torrent port
+      - "8080:8080"
+      - "6881:6881/tcp"
       - "6881:6881/udp"
 
     restart: unless-stopped
@@ -25,14 +25,12 @@ services:
 
     network_mode: "service:gluetun"
 
-    depends_on:
-      - gluetun
-
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Paris
       - WEBUI_PORT=8080
+      - TORRENTING_PORT=6881
 
     volumes:
       - /volume1/homelab/appdata/qbittorrent:/config
