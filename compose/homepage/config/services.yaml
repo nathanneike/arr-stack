@@ -1,0 +1,43 @@
+- Media:
+    - Jellyfin:
+        href: http://192.168.1.60:8096
+        icon: jellyfin.png
+
+    - Jellyseerr:
+        href: http://192.168.1.60:5055
+        icon: jellyseerr.png
+
+    - Sonarr:
+        href: http://192.168.1.60:8989
+        icon: sonarr.png
+
+    - Radarr:
+        href: http://192.168.1.60:7878
+        icon: radarr.png
+
+    - Prowlarr:
+        href: http://192.168.1.60:9696
+        icon: prowlarr.png
+
+- Downloads:
+    - qBittorrent:
+        href: http://192.168.1.60:8080
+        icon: qbittorrent.png
+
+- Monitoring:
+    - Grafana:
+        href: http://192.168.1.60:3000
+        icon: grafana.png
+
+    - Prometheus:
+        href: http://192.168.1.60:9090
+        icon: prometheus.png
+
+- Infrastructure:
+    - Traefik:
+        href: http://traefik.home.arpa
+        icon: traefik.png
+
+    - AdGuard:
+        href: http://192.168.1.60:3001
+        icon: adguard-home.png

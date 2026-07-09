@@ -1,0 +1,25 @@
+services:
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+
+    container_name: homepage
+
+    restart: unless-stopped
+
+    ports:
+      - "3002:3000"
+
+    volumes:
+      - ./config:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - HOMEPAGE_ALLOWED_HOSTS=192.168.1.60:3002,home.home.arpa
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true

@@ -1,3 +1,12 @@
 # Secrets
 **/.env
 config/gluetun/wg0.conf
+
+# Homepage
+
+compose/homepage/config/logs/
+
+# AdGuard runtime
+
+compose/adguardhome/conf/
+compose/adguardhome/work/
